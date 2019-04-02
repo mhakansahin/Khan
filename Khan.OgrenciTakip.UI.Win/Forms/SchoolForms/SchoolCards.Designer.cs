@@ -32,14 +32,21 @@
             this.tablo = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridView();
             this.colId = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colCode = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
-            this.longNavigator1 = new Khan.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.colSchoolName = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colCity = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colCounty = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colDescription = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
+            this.longNavigator1 = new Khan.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ribbonControl
+            // 
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Size = new System.Drawing.Size(999, 102);
+            this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // grid
             // 
@@ -118,14 +125,6 @@
             this.colCode.VisibleIndex = 0;
             this.colCode.Width = 116;
             // 
-            // longNavigator1
-            // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 639);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(999, 24);
-            this.longNavigator1.TabIndex = 3;
-            // 
             // colSchoolName
             // 
             this.colSchoolName.Caption = "Okul Adı";
@@ -178,6 +177,14 @@
             this.colDescription.VisibleIndex = 4;
             this.colDescription.Width = 327;
             // 
+            // longNavigator1
+            // 
+            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator1.Location = new System.Drawing.Point(0, 639);
+            this.longNavigator1.Name = "longNavigator1";
+            this.longNavigator1.Size = new System.Drawing.Size(999, 24);
+            this.longNavigator1.TabIndex = 3;
+            // 
             // SchoolCards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,8 +194,10 @@
             this.Controls.Add(this.longNavigator1);
             this.Name = "SchoolCards";
             this.Text = "Okul Kartları";
+            this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator1, 0);
             this.Controls.SetChildIndex(this.grid, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             this.ResumeLayout(false);
