@@ -20,7 +20,7 @@ namespace Khan.OgrenciTakip.Data.Contexts
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); //Table' ýn ismini ne vermiþsek database e o gitsin.(s eklemesin ismin sonuna.)
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); //Bir tablodan bir veriyi sildiðimiz zaman, iliþkili olduðu tablodan da verileri silme.
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); //Bir tablodan bir veriyi sildiðimiz zaman, iliþkili olduðu tablodan da verileri silmesin.
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>(); //Üsttekinin aynýsý.
         }
 

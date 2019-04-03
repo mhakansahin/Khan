@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Khan.OgrenciTakip.DataAccessLayer", "Khan.DataAccessLayer\Khan.OgrenciTakip.DataAccessLayer.csproj", "{A8E85486-2F05-4220-8804-42B6A09AF138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Khan.OgrenciTakip.DLL", "Khan.DLL\Khan.OgrenciTakip.DLL.csproj", "{1B81BEF0-9513-4088-8FB2-02F8AAA6D0FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Khan.OgrenciTakip.BLL", "Khan.DLL\Khan.OgrenciTakip.BLL.csproj", "{1B81BEF0-9513-4088-8FB2-02F8AAA6D0FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Khan.OgrenciTakip.UI.Win", "Khan.OgrenciTakip.UI.Win\Khan.OgrenciTakip.UI.Win.csproj", "{60C3C088-A103-4772-AE4E-8F5B85692584}"
 EndProject
