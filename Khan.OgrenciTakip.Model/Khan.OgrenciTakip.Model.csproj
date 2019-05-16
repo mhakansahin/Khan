@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\SchoolDto.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
     <Compile Include="Entities\Base\BaseStatusEntity.cs" />
     <Compile Include="Entities\Base\BaseMovementEntity.cs" />
+    <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\County.cs" />
     <Compile Include="Entities\School.cs" />

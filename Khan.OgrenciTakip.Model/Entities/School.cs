@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Khan.OgrenciTakip.Model.Entities
 {
-    public class School : BaseEntity
+    public class School : BaseStatusEntity
     {
         public string SchoolName { get; set; }
         public long CityId { get; set; }
