@@ -15,7 +15,7 @@ namespace Khan.OgrenciTakip.Model.Dto
         public string CountyName { get; set; }
     }
 
-    public class SchoolL : BaseEntity
+    public class SchoolL : BaseEntity //L -> List
     {
         public string SchoolName { get; set; }
         public string CityName { get; set; }

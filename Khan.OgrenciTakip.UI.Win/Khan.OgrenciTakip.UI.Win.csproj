@@ -44,7 +44,16 @@
       <HintPath>..\..\..\..\..\..\..\Netcad\TOOLS\UTILS\NETTOOLS\DevExpress.XtraLayout.v18.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -80,6 +89,12 @@
     </Compile>
     <Compile Include="Forms\SchoolForms\SchoolCards.Designer.cs">
       <DependentUpon>SchoolCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IStatusBarDescription.cs" />
     <Compile Include="Interfaces\IStatusBarShortCut.cs" />
@@ -181,6 +196,9 @@
     <EmbeddedResource Include="Forms\SchoolForms\SchoolCards.resx">
       <DependentUpon>SchoolCards.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,6 +214,7 @@
     <EmbeddedResource Include="UserControls\Navigators\SmallNavigator.resx">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -360,6 +379,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\article_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Khan.DLL\Khan.OgrenciTakip.BLL.csproj">
+      <Project>{1B81BEF0-9513-4088-8FB2-02F8AAA6D0FD}</Project>
+      <Name>Khan.OgrenciTakip.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Khan.OgrenciTakip.Model\Khan.OgrenciTakip.Model.csproj">
+      <Project>{acb8ee3a-d052-4a4c-8aea-747c2dd07cbe}</Project>
+      <Name>Khan.OgrenciTakip.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

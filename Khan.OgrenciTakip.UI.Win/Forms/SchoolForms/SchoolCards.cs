@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Khan.OgrenciTakip.UI.Win.Forms.BaseForms;
+using Khan.DLL.General;
 
 namespace Khan.OgrenciTakip.UI.Win.Forms.SchoolForms
 {
@@ -17,6 +18,9 @@ namespace Khan.OgrenciTakip.UI.Win.Forms.SchoolForms
         public SchoolCards()
         {
             InitializeComponent();
+
+            SchoolBll bll = new SchoolBll();
+            grid.DataSource = bll.List(null);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using Khan.OgrenciTakip.Common.Enums;
+using System.Linq;
 
 namespace Khan.DLL.General
 {
@@ -43,7 +44,7 @@ namespace Khan.DLL.General
                 CityName = x.City.CityName,
                 CountyName = x.County.CountyName,
                 Description = x.Description
-            });
+            }).OrderBy(x => x.Code).ToList();
         }
 
         public bool Insert(BaseEntity entity)
