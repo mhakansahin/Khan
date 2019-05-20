@@ -2,13 +2,14 @@
 using Khan.OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Khan.OgrenciTakip.Model.Dto
 {
-    //Attribute
+    [NotMapped]
     public class SchoolS : School //S -> Single
     {
         public string CityName { get; set; }
