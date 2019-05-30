@@ -1,6 +1,6 @@
 ﻿namespace Khan.OgrenciTakip.UI.Win.Forms.SchoolForms
 {
-    partial class SchoolCard
+    partial class SchoolEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -318,14 +318,14 @@
             this.lciDescription.TextSize = new System.Drawing.Size(41, 13);
             this.lciDescription.TextToControlDistance = 5;
             // 
-            // SchoolCard
+            // SchoolEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 359);
             this.Controls.Add(this.myDataLayoutControl);
             this.MinimumSize = new System.Drawing.Size(400, 360);
-            this.Name = "SchoolCard";
+            this.Name = "SchoolEditForm";
             this.Text = "Okul Kartı";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);

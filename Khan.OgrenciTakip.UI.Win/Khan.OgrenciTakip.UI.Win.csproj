@@ -66,30 +66,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\BaseForms\BaseCardForm.cs">
+    <Compile Include="Forms\BaseForms\BaseEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BaseForms\BaseCardForm.Designer.cs">
-      <DependentUpon>BaseCardForm.cs</DependentUpon>
+    <Compile Include="Forms\BaseForms\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BaseForms\BaseCardsForm.cs">
+    <Compile Include="Forms\BaseForms\BaseListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BaseForms\BaseCardsForm.Designer.cs">
-      <DependentUpon>BaseCardsForm.cs</DependentUpon>
+    <Compile Include="Forms\BaseForms\BaseListForm.Designer.cs">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SchoolForms\SchoolCard.cs">
+    <Compile Include="Forms\SchoolForms\SchoolEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SchoolForms\SchoolCard.Designer.cs">
-      <DependentUpon>SchoolCard.cs</DependentUpon>
+    <Compile Include="Forms\SchoolForms\SchoolEditForm.Designer.cs">
+      <DependentUpon>SchoolEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SchoolForms\SchoolCards.cs">
+    <Compile Include="Forms\SchoolForms\SchoolListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SchoolForms\SchoolCards.Designer.cs">
-      <DependentUpon>SchoolCards.cs</DependentUpon>
+    <Compile Include="Forms\SchoolForms\SchoolListForm.Designer.cs">
+      <DependentUpon>SchoolListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\FilterFunctions.cs" />
+    <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="GeneralForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +102,9 @@
     <Compile Include="Interfaces\IStatusBarShortCut.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
+    <Compile Include="Show\ShowEditForms.cs" />
+    <Compile Include="Show\ShowListForms.cs" />
     <Compile Include="UserControls\Controls\MyButtonEdit.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -184,17 +189,17 @@
     <Compile Include="UserControls\Navigators\SmallNavigator.Designer.cs">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\BaseForms\BaseCardForm.resx">
-      <DependentUpon>BaseCardForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BaseForms\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BaseForms\BaseCardsForm.resx">
-      <DependentUpon>BaseCardsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SchoolForms\SchoolCard.resx">
-      <DependentUpon>SchoolCard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SchoolForms\SchoolEditForm.resx">
+      <DependentUpon>SchoolEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SchoolForms\SchoolCards.resx">
-      <DependentUpon>SchoolCards.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SchoolForms\SchoolListForm.resx">
+      <DependentUpon>SchoolListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -385,10 +390,26 @@
       <Project>{1B81BEF0-9513-4088-8FB2-02F8AAA6D0FD}</Project>
       <Name>Khan.OgrenciTakip.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Khan.OgrenciTakip.Common\Khan.OgrenciTakip.Common.csproj">
+      <Project>{116A5906-E72F-47FF-953E-7F895CC9F829}</Project>
+      <Name>Khan.OgrenciTakip.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Khan.OgrenciTakip.Model\Khan.OgrenciTakip.Model.csproj">
       <Project>{acb8ee3a-d052-4a4c-8aea-747c2dd07cbe}</Project>
       <Name>Khan.OgrenciTakip.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttodocx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

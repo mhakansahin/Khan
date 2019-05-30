@@ -1,6 +1,6 @@
 ﻿namespace Khan.OgrenciTakip.UI.Win.Forms.BaseForms
 {
-    partial class BaseCardsForm
+    partial class BaseListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -95,6 +95,13 @@
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.btnSend = new DevExpress.XtraBars.BarSubItem();
+            this.btnExcelFiles = new DevExpress.XtraBars.BarSubItem();
+            this.btnStandardExcelFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFormatExcelFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUnformattedExcelFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWordFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPdfFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTextFile = new DevExpress.XtraBars.BarButtonItem();
             this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.barInsert = new DevExpress.XtraBars.BarStaticItem();
             this.barInsertDescription = new DevExpress.XtraBars.BarStaticItem();
@@ -102,7 +109,7 @@
             this.barDeleteDescription = new DevExpress.XtraBars.BarStaticItem();
             this.barEnter = new DevExpress.XtraBars.BarStaticItem();
             this.barEnterDescription = new DevExpress.XtraBars.BarStaticItem();
-            this.barButtonStatus = new DevExpress.XtraBars.BarButtonItem();
+            this.btnActivePasive = new DevExpress.XtraBars.BarButtonItem();
             this.barFixIt = new DevExpress.XtraBars.BarStaticItem();
             this.barFixItDescription = new DevExpress.XtraBars.BarStaticItem();
             this.barRefresh = new DevExpress.XtraBars.BarStaticItem();
@@ -149,7 +156,7 @@
             this.barDeleteDescription,
             this.barEnter,
             this.barEnterDescription,
-            this.barButtonStatus,
+            this.btnActivePasive,
             this.barFixIt,
             this.barFixItDescription,
             this.barRefresh,
@@ -163,9 +170,16 @@
             this.barSend,
             this.barSendDescription,
             this.barExit,
-            this.barExitDescription});
+            this.barExitDescription,
+            this.btnExcelFiles,
+            this.btnStandardExcelFile,
+            this.btnFormatExcelFile,
+            this.btnUnformattedExcelFile,
+            this.btnWordFile,
+            this.btnPdfFile,
+            this.btnTextFile});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 34;
+            this.ribbonControl.MaxItemId = 41;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -369,6 +383,11 @@
             this.btnSend.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.export_16x16;
             this.btnSend.ImageOptions.LargeImage = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.export_32x32;
             this.btnSend.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F12);
+            this.btnSend.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelFiles),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnWordFile),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdfFile),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTextFile)});
             this.btnSend.Name = "btnSend";
             toolTipTitleItem17.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem17.Text = "( F12 )";
@@ -383,6 +402,65 @@
             superToolTip9.Items.Add(toolTipSeparatorItem9);
             superToolTip9.Items.Add(toolTipTitleItem18);
             this.btnSend.SuperTip = superToolTip9;
+            // 
+            // btnExcelFiles
+            // 
+            this.btnExcelFiles.Caption = "Excel Dosyaları";
+            this.btnExcelFiles.Id = 34;
+            this.btnExcelFiles.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttoxlsx_32x32;
+            this.btnExcelFiles.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnStandardExcelFile),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFormatExcelFile),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnUnformattedExcelFile)});
+            this.btnExcelFiles.Name = "btnExcelFiles";
+            // 
+            // btnStandardExcelFile
+            // 
+            this.btnStandardExcelFile.Caption = "Excel Dosyası (Standart)";
+            this.btnStandardExcelFile.Id = 35;
+            this.btnStandardExcelFile.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttoxlsx_32x32;
+            this.btnStandardExcelFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
+            this.btnStandardExcelFile.Name = "btnStandardExcelFile";
+            // 
+            // btnFormatExcelFile
+            // 
+            this.btnFormatExcelFile.Caption = "Excel Dosyası (Formatlı)";
+            this.btnFormatExcelFile.Id = 36;
+            this.btnFormatExcelFile.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttoxlsx_32x32;
+            this.btnFormatExcelFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
+            this.btnFormatExcelFile.Name = "btnFormatExcelFile";
+            // 
+            // btnUnformattedExcelFile
+            // 
+            this.btnUnformattedExcelFile.Caption = "Excel Dosyası (Formatsız)";
+            this.btnUnformattedExcelFile.Id = 37;
+            this.btnUnformattedExcelFile.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttoxlsx_32x32;
+            this.btnUnformattedExcelFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z));
+            this.btnUnformattedExcelFile.Name = "btnUnformattedExcelFile";
+            // 
+            // btnWordFile
+            // 
+            this.btnWordFile.Caption = "Word Dosyası";
+            this.btnWordFile.Id = 38;
+            this.btnWordFile.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttodocx_32x32;
+            this.btnWordFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W));
+            this.btnWordFile.Name = "btnWordFile";
+            // 
+            // btnPdfFile
+            // 
+            this.btnPdfFile.Caption = "Pdf Dosyası";
+            this.btnPdfFile.Id = 39;
+            this.btnPdfFile.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttopdf_32x32;
+            this.btnPdfFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
+            this.btnPdfFile.Name = "btnPdfFile";
+            // 
+            // btnTextFile
+            // 
+            this.btnTextFile.Caption = "Text Dosyası";
+            this.btnTextFile.Id = 40;
+            this.btnTextFile.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.exporttotxt_32x32;
+            this.btnTextFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T));
+            this.btnTextFile.Name = "btnTextFile";
             // 
             // btnExit
             // 
@@ -453,26 +531,26 @@
             this.barEnterDescription.Id = 18;
             this.barEnterDescription.Name = "barEnterDescription";
             // 
-            // barButtonStatus
+            // btnActivePasive
             // 
-            this.barButtonStatus.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barButtonStatus.Caption = "Pasif Kartlar";
-            this.barButtonStatus.Id = 19;
-            this.barButtonStatus.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.article_16x162;
-            this.barButtonStatus.ImageOptions.LargeImage = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.article_32x322;
-            this.barButtonStatus.ItemAppearance.Hovered.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.barButtonStatus.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.DarkBlue;
-            this.barButtonStatus.ItemAppearance.Hovered.Options.UseFont = true;
-            this.barButtonStatus.ItemAppearance.Hovered.Options.UseForeColor = true;
-            this.barButtonStatus.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.barButtonStatus.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Maroon;
-            this.barButtonStatus.ItemAppearance.Normal.Options.UseFont = true;
-            this.barButtonStatus.ItemAppearance.Normal.Options.UseForeColor = true;
-            this.barButtonStatus.ItemAppearance.Pressed.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.barButtonStatus.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.Maroon;
-            this.barButtonStatus.ItemAppearance.Pressed.Options.UseFont = true;
-            this.barButtonStatus.ItemAppearance.Pressed.Options.UseForeColor = true;
-            this.barButtonStatus.Name = "barButtonStatus";
+            this.btnActivePasive.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btnActivePasive.Caption = "Pasif Kartlar";
+            this.btnActivePasive.Id = 19;
+            this.btnActivePasive.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.article_16x162;
+            this.btnActivePasive.ImageOptions.LargeImage = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.article_32x322;
+            this.btnActivePasive.ItemAppearance.Hovered.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btnActivePasive.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnActivePasive.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnActivePasive.ItemAppearance.Hovered.Options.UseForeColor = true;
+            this.btnActivePasive.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btnActivePasive.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Maroon;
+            this.btnActivePasive.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnActivePasive.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.btnActivePasive.ItemAppearance.Pressed.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btnActivePasive.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.Maroon;
+            this.btnActivePasive.ItemAppearance.Pressed.Options.UseFont = true;
+            this.btnActivePasive.ItemAppearance.Pressed.Options.UseForeColor = true;
+            this.btnActivePasive.Name = "btnActivePasive";
             toolTipTitleItem21.ImageOptions.Image = global::Khan.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem21.Text = "( Ctrl+L )";
             toolTipItem11.LeftIndent = 6;
@@ -484,7 +562,7 @@
             superToolTip11.Items.Add(toolTipItem11);
             superToolTip11.Items.Add(toolTipSeparatorItem11);
             superToolTip11.Items.Add(toolTipTitleItem22);
-            this.barButtonStatus.SuperTip = superToolTip11;
+            this.btnActivePasive.SuperTip = superToolTip11;
             // 
             // barFixIt
             // 
@@ -628,7 +706,7 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.barDeleteDescription);
             this.ribbonStatusBar1.ItemLinks.Add(this.barEnter, true);
             this.ribbonStatusBar1.ItemLinks.Add(this.barEnterDescription);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barButtonStatus);
+            this.ribbonStatusBar1.ItemLinks.Add(this.btnActivePasive);
             this.ribbonStatusBar1.ItemLinks.Add(this.barFixIt, true);
             this.ribbonStatusBar1.ItemLinks.Add(this.barFixItDescription);
             this.ribbonStatusBar1.ItemLinks.Add(this.barRefresh, true);
@@ -653,7 +731,7 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // BaseCardsForm
+            // BaseListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -661,7 +739,7 @@
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.MaximizeBox = false;
-            this.Name = "BaseCardsForm";
+            this.Name = "BaseListForm";
             this.Ribbon = this.ribbonControl;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -695,7 +773,7 @@
         private DevExpress.XtraBars.BarStaticItem barDeleteDescription;
         private DevExpress.XtraBars.BarStaticItem barEnter;
         private DevExpress.XtraBars.BarStaticItem barEnterDescription;
-        private DevExpress.XtraBars.BarButtonItem barButtonStatus;
+        private DevExpress.XtraBars.BarButtonItem btnActivePasive;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.BarStaticItem barFixIt;
         private DevExpress.XtraBars.BarStaticItem barFixItDescription;
@@ -711,5 +789,12 @@
         private DevExpress.XtraBars.BarStaticItem barSendDescription;
         private DevExpress.XtraBars.BarStaticItem barExit;
         private DevExpress.XtraBars.BarStaticItem barExitDescription;
+        private DevExpress.XtraBars.BarSubItem btnExcelFiles;
+        private DevExpress.XtraBars.BarButtonItem btnStandardExcelFile;
+        private DevExpress.XtraBars.BarButtonItem btnFormatExcelFile;
+        private DevExpress.XtraBars.BarButtonItem btnUnformattedExcelFile;
+        private DevExpress.XtraBars.BarButtonItem btnWordFile;
+        private DevExpress.XtraBars.BarButtonItem btnPdfFile;
+        private DevExpress.XtraBars.BarButtonItem btnTextFile;
     }
 }

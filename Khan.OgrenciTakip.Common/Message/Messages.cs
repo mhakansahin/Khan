@@ -10,6 +10,11 @@ namespace Khan.OgrenciTakip.Common.Message
             XtraMessageBox.Show(errorMessage, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        public static void InformationMessage(string informationMessage)
+        {
+            XtraMessageBox.Show(informationMessage, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public static DialogResult OnSelectYesNo(string message, string caption)
         {
             return XtraMessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -23,6 +28,11 @@ namespace Khan.OgrenciTakip.Common.Message
         public static DialogResult DeleteMessage(string cardName)
         {
             return OffSelectYesNo($"Seçtiğiniz {cardName} silinecektir. Onaylıyor musunuz?", "Silme Onayı");
+        }
+
+        public static void UnSelectInformationMessage()
+        {
+            InformationMessage("Lütfen bir kart seçiniz.");
         }
     }
 }

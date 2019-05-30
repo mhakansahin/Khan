@@ -1,6 +1,6 @@
 ﻿namespace Khan.OgrenciTakip.UI.Win.Forms.SchoolForms
 {
-    partial class SchoolCards
+    partial class SchoolListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.grid = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridControl();
-            this.tablo = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridView();
+            this.table = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridView();
             this.colId = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colCode = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colSchoolName = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colCity = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colCounty = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
             this.colDescription = new Khan.OgrenciTakip.UI.Win.UserControls.Grids.MyGridColumn();
-            this.longNavigator1 = new Khan.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new Khan.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -52,52 +52,52 @@
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 102);
-            this.grid.MainView = this.tablo;
+            this.grid.MainView = this.table;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
             this.grid.Size = new System.Drawing.Size(999, 537);
             this.grid.TabIndex = 2;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.tablo});
+            this.table});
             // 
-            // tablo
+            // table
             // 
-            this.tablo.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tablo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.FooterPanel.Options.UseFont = true;
-            this.tablo.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.tablo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.tablo.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.tablo.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tablo.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.table.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.table.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.table.Appearance.FooterPanel.Options.UseFont = true;
+            this.table.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.table.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.table.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.table.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.table.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.table.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.table.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.table.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colCode,
             this.colSchoolName,
             this.colCity,
             this.colCounty,
             this.colDescription});
-            this.tablo.GridControl = this.grid;
-            this.tablo.Name = "tablo";
-            this.tablo.OptionsMenu.EnableColumnMenu = false;
-            this.tablo.OptionsMenu.EnableFooterMenu = false;
-            this.tablo.OptionsMenu.EnableGroupPanelMenu = false;
-            this.tablo.OptionsNavigation.EnterMoveNextColumn = true;
-            this.tablo.OptionsPrint.AutoWidth = false;
-            this.tablo.OptionsPrint.PrintFooter = false;
-            this.tablo.OptionsPrint.PrintGroupFooter = false;
-            this.tablo.OptionsView.ColumnAutoWidth = false;
-            this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
-            this.tablo.OptionsView.RowAutoHeight = true;
-            this.tablo.OptionsView.ShowAutoFilterRow = true;
-            this.tablo.OptionsView.ShowGroupPanel = false;
-            this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarDescription = null;
-            this.tablo.StatusBarShortCut = null;
-            this.tablo.StatusBarShortCutDescription = null;
-            this.tablo.ViewCaption = "Okul Kartları";
+            this.table.GridControl = this.grid;
+            this.table.Name = "table";
+            this.table.OptionsMenu.EnableColumnMenu = false;
+            this.table.OptionsMenu.EnableFooterMenu = false;
+            this.table.OptionsMenu.EnableGroupPanelMenu = false;
+            this.table.OptionsNavigation.EnterMoveNextColumn = true;
+            this.table.OptionsPrint.AutoWidth = false;
+            this.table.OptionsPrint.PrintFooter = false;
+            this.table.OptionsPrint.PrintGroupFooter = false;
+            this.table.OptionsView.ColumnAutoWidth = false;
+            this.table.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
+            this.table.OptionsView.RowAutoHeight = true;
+            this.table.OptionsView.ShowAutoFilterRow = true;
+            this.table.OptionsView.ShowGroupPanel = false;
+            this.table.OptionsView.ShowViewCaption = true;
+            this.table.StatusBarDescription = null;
+            this.table.StatusBarShortCut = null;
+            this.table.StatusBarShortCutDescription = null;
+            this.table.ViewCaption = "Okul Kartları";
             // 
             // colId
             // 
@@ -177,29 +177,29 @@
             this.colDescription.VisibleIndex = 4;
             this.colDescription.Width = 327;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 639);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(999, 24);
-            this.longNavigator1.TabIndex = 3;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 639);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(999, 24);
+            this.longNavigator.TabIndex = 3;
             // 
-            // SchoolCards
+            // SchoolListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 694);
             this.Controls.Add(this.grid);
-            this.Controls.Add(this.longNavigator1);
-            this.Name = "SchoolCards";
+            this.Controls.Add(this.longNavigator);
+            this.Name = "SchoolListForm";
             this.Text = "Okul Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,10 +208,10 @@
         #endregion
 
         private UserControls.Grids.MyGridControl grid;
-        private UserControls.Grids.MyGridView tablo;
+        private UserControls.Grids.MyGridView table;
         private UserControls.Grids.MyGridColumn colId;
         private UserControls.Grids.MyGridColumn colCode;
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridColumn colSchoolName;
         private UserControls.Grids.MyGridColumn colCity;
         private UserControls.Grids.MyGridColumn colCounty;

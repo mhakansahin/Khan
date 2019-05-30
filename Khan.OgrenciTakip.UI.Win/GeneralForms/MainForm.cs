@@ -24,7 +24,7 @@ namespace Khan.OgrenciTakip.UI.Win.GeneralForms
 
         private void BtnSchoolCards_ItemClick(object sender, ItemClickEventArgs e)
         {
-            SchoolCards frm = new SchoolCards();
+            SchoolListForm frm = new SchoolListForm();
             frm.MdiParent = ActiveForm;
             frm.Show();
         }
